@@ -1,12 +1,13 @@
-# THE PAGE IS UNDER CONSTRUCTION AND WILL BE UPDATED SOON
-
 # Probabilistic Normalized Convolutional Neural Networks (pNCNN)
 
-The official PyTorch implementation for "Uncertainty-Aware CNNs for Depth Completion: Uncertainty from Beginning to End" presented at CVPR 2020, Seattle, USA.
+This is the official PyTorch implementation for "Uncertainty-Aware CNNs for Depth Completion: Uncertainty from Beginning to End" presented at CVPR 2020, Seattle, USA.
 
-[[PDF]]() [[Supplementary]]() [[Poster]]()
+[[PDF]]() [[Supplementary]]() [[1min Video]]() [[Slides]]()
 
-![header_image](imgs/kitti_qual.png)
+<p align="center">
+  <img src="imgs/teaser.gif"/>
+</p>
+
 ```
 @article{eldesokey2018propagating,
   title={Propagating Confidences through CNNs for Sparse Data Regression},
@@ -15,13 +16,13 @@ The official PyTorch implementation for "Uncertainty-Aware CNNs for Depth Comple
   year={2018}
 }
 ```
-
 ---
 
 ## Dependecies
-The code was tested with Python 3.7.4 and PyTorch 1.4, but it should work on any PyTorch version > 1.1
+The code was developed using Python 3.7.4 and PyTorch 1.4, but it should work on any PyTorch version > 1.1
 
 * pytorch>1.1
+* torchvision>0.5.0
 * json
 * matplotlib
 * opencv
@@ -32,7 +33,7 @@ The code was tested with Python 3.7.4 and PyTorch 1.4, but it should work on any
 ## Datasets
 
 ### Kitti-Depth
-To download the Kitti-Depth dataset, use the provided Python script `dataloaders/download_kitti_depth_rgb.py`. 
+To download the Kitti-Depth dataset, use the provided Python script [`dataloaders/download_kitti_depth_rgb.py`](dataloaders/download_kitti_depth_rgb.py). 
 
 *Remeber to edit the script first to set download directories.*
 
@@ -43,3 +44,77 @@ Download and extract the dataset in h5 format provided from [sparse-to-dense](ht
 wget http://datasets.lids.mit.edu/sparse-to-dense/data/nyudepthv2.tar.gz
 tar -xvf nyudepthv2.tar.gz && rm -f nyudepthv2.tar.gz
 ```
+
+---
+
+## Training
+
+Experiments are stored in `workspace` directory, where you can have different workspaces in sub-directories. 
+
+To train a new experiment, you should create a new directory with the name of the experiment inside your workspace directory which has the following files:
+* `network.py` which has the desired architecture.
+* `args.json` which has the experiment arguments. 
+
+You can copy these files from any of the pretrained models and modify it.
+
+To run the training, you need to run the following command:
+```bash
+python main.py --ws <WORKSPACE> --exp <EXP> --args <ARGS>
+```
+
+`--ws` is the name of the sub-direcotry inside `workspace` that has your experiment.
+
+`--exp` is the name of the experiment.
+
+`--args` You have two options: either to set this argument to `json` which will load all arguments from `args.json` described above, 
+*OR* discard it and set all the arguments in the terminal manually.
+
+  
+### Example 
+To create an experiemnt called `my_experiment` inside a workspace called `my_workspace`, then you should create a directory for the experiments at `workspace/my_workspace/my_experiment`. This direcotry should have two main files `network.py` and `args.json` as described above. 
+
+You need to modify the following arguments in the json file to match your new experiments: [`exp`, `workspace`, `dataset`, `dataset_path`]. Other arguments, you can change as needed.
+
+Now you are ready to start training by calling:
+```bash
+python main.py --ws my_workspace --exp my_experiment --args json
+```
+
+---
+
+## Tensorboard 
+Tensorboard is supported by default and you can initiate it as usual by calling:
+```bash
+tensorboard --logdir=workspace/my_workspace
+```
+
+---
+
+## Pretrained Models
+We provide the pretrained models for the `KITTI-Depth` dataset and the `NYU-Depth-v2` dataset inside `workspace/kitti` and `workspace/nyu` respectively.
+
+---
+
+## Resuming Training
+To resume training, you can call:
+```bash
+python main.py --resume <path-to-checkpoint>
+```
+By default, the argument will be loaded from the checkpoint. If you want to change some arguments, you can edit `args.json` for the experiment and it will override the arguments in the checkpoints.
+
+---
+
+## Testing
+To test a pretrained model, you can call:
+```bash
+python main.py --evaluate <path-to-checkpoint>
+```
+
+---
+
+## Remarks
+If you use our code or our paper, please consider citing us. The bibtex is provided above.
+
+If you have questions, please create an issue.
+
+
