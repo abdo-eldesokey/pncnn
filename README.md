@@ -5,7 +5,7 @@ This is the official PyTorch implementation for "Uncertainty-Aware CNNs for Dept
 [[PDF]]() [[Supplementary]]() [[1min Video]]() [[Slides]]()
 
 <p align="center">
-  <img src="imgs/teaser.gif"/>
+  <img src="imgs/teaser2.gif"/>
 </p>
 
 ```
