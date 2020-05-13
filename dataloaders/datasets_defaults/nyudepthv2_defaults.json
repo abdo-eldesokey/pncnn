@@ -1,0 +1,16 @@
+{
+	"dataset": "nyudepthv2",
+	"dataset_path": "/ssd/datasets/nyu-depth-v2/nyudepthv2",
+	"modality": "d",
+	"batch_size": 8,
+	"train_on": "full",
+	"workers": 4,
+	"num_samples": 1000,
+	"max_depth": -1.0,
+	"sparsifier": "uar",
+    "loss": "masked_l1",
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "lr_decay_step": 10,
+    "epochs": 20
+}

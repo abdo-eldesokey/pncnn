@@ -1,0 +1,16 @@
+{
+    "dataset_path": "/ssd/datasets/KITTI_Depth",
+    "raw_kitti_path": "/ssd/datasets/KITTI_Raw",
+    "modality": "d",
+    "batch_size": 4,
+    "train_on": "full",
+    "val_ds": "selval",
+    "norm_factor": 256,
+    "train_disp": false,
+    "rgb2gray": false,
+    "loss": "masked_l1",
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "lr_decay_step": 10,
+    "epochs": 20
+}
