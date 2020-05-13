@@ -82,11 +82,14 @@ python main.py --ws my_workspace --exp my_experiment --args json
 
 ---
 
-## Tensorboard 
+## Logging 
 Tensorboard is supported by default and you can initiate it as usual by calling:
 ```bash
 tensorboard --logdir=workspace/my_workspace
 ```
+By default, tensorboard log files are save to the directory `tb_log` inside the experiment directory.
+
+Also, the evaluation metrics are saved after each epoch both for the training and the test set as CSV files inside the experiment directory.
 
 ---
 
