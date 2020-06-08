@@ -9,11 +9,11 @@ This is the official PyTorch implementation for "Uncertainty-Aware CNNs for Dept
 </p>
 
 ```
-@misc{liu2020learning,
-    title={Learning to See Through Obstructions},
-    author={Yu-Lun Liu and Wei-Sheng Lai and Ming-Hsuan Yang and Yung-Yu Chuang and Jia-Bin Huang},
+@misc{eldesokey2020uncertaintyaware,
+    title={Uncertainty-Aware CNNs for Depth Completion: Uncertainty from Beginning to End},
+    author={Abdelrahman Eldesokey and Michael Felsberg and Karl Holmquist and Mikael Persson},
     year={2020},
-    eprint={2004.01180},
+    eprint={2006.03349},
     archivePrefix={arXiv},
     primaryClass={cs.CV}
 }
