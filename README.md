@@ -2,7 +2,7 @@
 
 This is the official PyTorch implementation for "Uncertainty-Aware CNNs for Depth Completion: Uncertainty from Beginning to End" presented at CVPR 2020, Seattle, USA.
 
-[[PDF]]() [[Supplementary]]() [[1min Video]]() [[Slides]]()
+[[ArXiv (With Supplementary]](https://arxiv.org/abs/2006.03349) [[1min Video]](https://www.youtube.com/watch?v=Iw_yk-UoKEo&feature=youtu.be) [[Slides]]
 
 <p align="center">
   <img src="imgs/teaser2.gif"/>
