@@ -9,11 +9,13 @@ This is the official PyTorch implementation for "Uncertainty-Aware CNNs for Dept
 </p>
 
 ```
-@article{eldesokey2018propagating,
-  title={Propagating Confidences through CNNs for Sparse Data Regression},
-  author={Eldesokey, Abdelrahman and Felsberg, Michael and Khan, Fahad Shahbaz},
-  journal={arXiv preprint arXiv:1805.11913},
-  year={2018}
+@misc{liu2020learning,
+    title={Learning to See Through Obstructions},
+    author={Yu-Lun Liu and Wei-Sheng Lai and Ming-Hsuan Yang and Yung-Yu Chuang and Jia-Bin Huang},
+    year={2020},
+    eprint={2004.01180},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
 }
 ```
 ---
