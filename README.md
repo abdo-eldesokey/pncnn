@@ -2,20 +2,19 @@
 
 This is the official PyTorch implementation for "Uncertainty-Aware CNNs for Depth Completion: Uncertainty from Beginning to End" presented at CVPR 2020, Seattle, USA.
 
-[[Paper (With Supplementary)]](https://arxiv.org/abs/2006.03349) [[1min Video]](https://www.youtube.com/watch?v=Iw_yk-UoKEo&feature=youtu.be) [[Slides]]
+[[PDF]](http://openaccess.thecvf.com/content_CVPR_2020/papers/Eldesokey_Uncertainty-Aware_CNNs_for_Depth_Completion_Uncertainty_from_Beginning_to_End_CVPR_2020_paper.pdf) [[ArXiv (With Supplementary)]](https://arxiv.org/abs/2006.03349) [[1min Video]](https://www.youtube.com/watch?v=Iw_yk-UoKEo&feature=youtu.be) [[Slides]]
 
 <p align="center">
   <img src="imgs/teaser2.gif"/>
 </p>
 
 ```
-@misc{eldesokey2020uncertaintyaware,
-    title={Uncertainty-Aware CNNs for Depth Completion: Uncertainty from Beginning to End},
-    author={Abdelrahman Eldesokey and Michael Felsberg and Karl Holmquist and Mikael Persson},
-    year={2020},
-    eprint={2006.03349},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+@InProceedings{Eldesokey_2020_CVPR,
+author = {Eldesokey, Abdelrahman and Felsberg, Michael and Holmquist, Karl and Persson, Michael},
+title = {Uncertainty-Aware CNNs for Depth Completion: Uncertainty from Beginning to End},
+booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2020}
 }
 ```
 ---
